@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:background="@drawable/border_bg_one"
+        android:layout_marginTop="@dimen/pading20"
+        android:layout_marginRight="@dimen/pading16"
+        android:layout_marginLeft="@dimen/pading16"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/chatType"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/RR_servies"
+            android:background="@color/Mehroon"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:padding="@dimen/pading5"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:id="@+id/allChatBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Services"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/pading14"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/LL_Pakage"
+            android:background="@drawable/border_bg_one"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:textColor="@color/white"
+                android:textSize="@dimen/pading16"/>
+
+            <TextView
+                android:padding="@dimen/pading5"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/buyingChatBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Package $ Offer"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="@dimen/pading14"/>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/RR_price"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:textColor="@color/white"
+                android:textSize="@dimen/pading18"/>
+
+
+            <TextView
+                android:padding="@dimen/pading5"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:id="@+id/sellingChatBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PRICE Table"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="@dimen/pading14"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_below="@+id/chatType"
+        android:id="@+id/chat_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

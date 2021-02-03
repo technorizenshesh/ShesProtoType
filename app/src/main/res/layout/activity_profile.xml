@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    >
+
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:background="@drawable/progresh_background"
+        android:elevation="@dimen/padding6"
+        android:padding="@dimen/padding5"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/colorPrimary"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/RR_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/RR_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    >
+                </ImageView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/white"
+                android:textSize="@dimen/pading20">
+            </TextView>
+
+
+        </RelativeLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/img_sign"
+                    android:layout_marginTop="@dimen/padding30"
+                    android:src="@drawable/logo"
+                    app:riv_corner_radius="@dimen/padding20" />
+
+
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/txt_name"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:hint="Name"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/txt_email"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:hint="Email"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/txt_mobile"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:hint="Phone"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+    <Button
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/padding20"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_Login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/RR_login"
+        android:layout_gravity="center"
+        android:text="Updateprofile"
+        android:textStyle="bold"
+        android:background="@drawable/roundbttn_register"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pading18"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context=".CreateProfile.CreateProfileActivity">
+
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:elevation="6dp"
+        android:padding="5dp"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/colorPrimary"
+        android:visibility="gone"/>
+
+    <!--Toolbaar-->
+    <RelativeLayout
+        android:id="@+id/RR_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/RR_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@mipmap/back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                >
+            </ImageView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filters"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pading20">
+        </TextView>
+
+        <TextView
+            android:layout_marginRight="@dimen/pading10"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pading20">
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/RR_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_below="@+id/RR_profile"
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salon Category"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading20">
+                </TextView>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:background="@drawable/whiteeditround"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    >
+
+                    <Spinner
+                        android:backgroundTint="@color/white"
+                        android:textSize="@dimen/padding18"
+                        android:id="@+id/Spn_Category"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        >
+                    </Spinner>
+
+                </LinearLayout>
+
+                <EditText
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="@dimen/pading10"
+                    android:background="@drawable/whiteeditround"
+                    android:drawableRight="@drawable/drop_dwon_new"
+                    android:drawablePadding="@dimen/pading10"
+                    android:hint="Male"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="@dimen/pading10"
+                    android:textColor="@color/whiteSecond"
+                    android:textColorHint="@color/whiteSecond"
+                    android:textSize="@dimen/pading18" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/pading10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Distance"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading20">
+                </TextView>
+
+                <EditText
+                    android:paddingRight="@dimen/pading10"
+                    android:drawablePadding="@dimen/pading10"
+                    android:drawableRight="@drawable/drop_dwon_new"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading18"
+                    android:hint="10 km"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+                <TextView
+                    android:layout_marginTop="@dimen/pading10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ratings"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading20">
+                </TextView>
+
+                <EditText
+                    android:paddingRight="@dimen/pading10"
+                    android:drawablePadding="@dimen/pading10"
+                    android:drawableRight="@drawable/drop_dwon_new"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading18"
+                    android:hint="5 Star"
+                    android:drawableLeft="@drawable/star"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+                <TextView
+                    android:layout_marginTop="@dimen/pading10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sort"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading20">
+                </TextView>
+
+                <EditText
+                    android:paddingRight="@dimen/pading10"
+                    android:drawablePadding="@dimen/pading10"
+                    android:drawableRight="@drawable/drop_dwon_new"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading18"
+                    android:hint="Prce- High to Low"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/pading10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maximum Price"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading20">
+                </TextView>
+
+                <EditText
+                    android:paddingRight="@dimen/pading10"
+                    android:drawablePadding="@dimen/pading10"
+                    android:drawableRight="@drawable/drop_dwon_new"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading18"
+                    android:hint="$60"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+                <TextView
+                    android:layout_marginTop="@dimen/pading10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Minimum Price"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading20">
+                </TextView>
+
+                <EditText
+                    android:paddingRight="@dimen/pading10"
+                    android:drawablePadding="@dimen/pading10"
+                    android:drawableRight="@drawable/drop_dwon_new"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading20"
+                    android:hint="$30"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+
+                <Button
+                    android:id="@+id/bttn_Sedn"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_below="@+id/RR_login"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="25dp"
+                    android:text="Apply"
+                    android:background="@drawable/roundbttn_register"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading18" />
+
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

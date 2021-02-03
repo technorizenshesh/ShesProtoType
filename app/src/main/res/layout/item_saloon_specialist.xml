@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="2dp"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/user_profile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:src="@drawable/haircut_img"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:id="@+id/txt_name"
+            android:textSize="@dimen/pading12"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/user_profile1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harshit Asati"
+            >
+        </TextView>
+        <TextView
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:id="@+id/txt_post"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pading10"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manager"
+            >
+        </TextView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

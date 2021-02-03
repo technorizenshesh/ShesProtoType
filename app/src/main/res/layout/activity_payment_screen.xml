@@ -1,0 +1,667 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".PaymentScreen.PaymentScreen">
+
+
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:elevation="6dp"
+        android:padding="5dp"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/colorPrimary"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/RR_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/RR_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:tint="@color/black"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                >
+            </ImageView>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/pading18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking Details"
+            >
+        </TextView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_marginTop="@dimen/pading10"
+        android:layout_below="@+id/RR_toolbar"
+        android:layout_above="@+id/bttn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/pading10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <RelativeLayout
+                    android:id="@+id/RR_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/pading5"
+                        android:layout_toLeftOf="@+id/LL_img"
+                        android:layout_width="120dp"
+                        android:id="@+id/card_hair"
+                        android:layout_height="150dp"
+                        android:padding="@dimen/pading5"
+                        app:cardCornerRadius="@dimen/pading12"
+                        app:cardBackgroundColor="#D1322E"
+                        android:layout_margin="@dimen/pading10"
+                        tools:ignore="MissingDefaultResource">
+
+                        <ImageView
+                            android:id="@+id/img_hair"
+                            android:src="@drawable/hair_wash"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_height="match_parent"
+                            android:fitsSystemWindows="true"
+                            android:scaleType="fitXY" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/pading5"
+                        android:id="@+id/LL_txt"
+                        android:layout_marginLeft="@dimen/pading5"
+                        android:layout_toRightOf="@+id/card_hair"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txt_name"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/pading20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Redbox Barber"
+                            >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txt_address"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/pading12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="288 Mcclure Court,Arkansas"
+                            >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txt_distance"
+                            android:drawableTint="@color/black"
+                            android:gravity="center"
+                            android:drawablePadding="@dimen/pading10"
+                            android:backgroundTint="@color/black"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/pading12"
+                            android:layout_width="wrap_content"
+                            android:drawableLeft="@mipmap/place"
+                            android:layout_height="wrap_content"
+                            android:text="1.2 km"
+                            >
+                        </TextView>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/services"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/pading12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Services"
+                                >
+                            </TextView>
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/pading5"
+                                android:layout_toRightOf="@+id/services"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/pading12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hair cut facial and mackup"
+                                >
+                            </TextView>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/RR_price"
+                    android:layout_marginLeft="@dimen/pading10"
+                    android:layout_below="@+id/RR_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/services2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/pading14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total:"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/pading5"
+                        android:layout_toRightOf="@+id/services2"
+                        android:textColor="@color/colorAccentRed"
+                        android:textSize="@dimen/pading14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$45.00"
+                        >
+                    </TextView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/RR_calender"
+                    android:background="@drawable/roundbttn_register"
+                    android:layout_margin="@dimen/pading20"
+                    android:layout_below="@+id/RR_price"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="#F0F0F0"
+                    android:layout_height="55dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/txt_date"
+                        android:layout_toRightOf="@+id/img_calender"
+                        android:layout_marginLeft="@dimen/pading10"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Friday,25 August 2020 @ 9:00am"
+                        android:textColor="@color/black1"
+                        android:textSize="@dimen/pading16" />
+
+                    <ImageView
+                        android:layout_marginLeft="@dimen/pading20"
+                        android:id="@+id/img_calender"
+                        android:background="@drawable/calender"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        >
+                    </ImageView>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginBottom="@dimen/pading5"
+                    android:layout_marginTop="@dimen/pading5"
+                    android:id="@+id/view"
+                    android:background="#F0F0F0"
+                    android:layout_below="@+id/RR_calender"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    >
+                </View>
+
+                <RelativeLayout
+                    android:id="@+id/RR_offer"
+                    android:layout_margin="@dimen/pading5"
+                    android:layout_below="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp">
+
+                    <RelativeLayout
+                        android:layout_marginLeft="@dimen/pading5"
+                        android:background="@color/colorAccentRed"
+                        android:id="@+id/img_one"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        >
+                        <ImageView
+                            android:tint="@color/white"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/gift"
+                            android:layout_width="50dp"
+                            android:layout_gravity="center"
+                            android:layout_height="50dp"
+                            android:fitsSystemWindows="true"
+                            android:scaleType="fitXY" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginRight="@dimen/pading10"
+                        android:layout_marginLeft="@dimen/pading10"
+                        android:layout_toRightOf="@+id/img_one"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/pading16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gift Code"
+                            >
+                        </TextView>
+
+                        <EditText
+                            android:layout_gravity="bottom"
+                            android:backgroundTint="@color/colorAccentBlue"
+                            android:hint="Gift20%OfferNetMe"
+                            android:textColorHint="@color/colorAccentBlue"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                        </EditText>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:background="@color/grayLight"
+                    android:padding="@dimen/pading10"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/RR_offer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/Payment_method"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_margin="@dimen/pading5"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/pading18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Payment Method"
+                            >
+                        </TextView>
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="@dimen/pading5"
+                            android:textColor="@color/colorAccentRed"
+                            android:textSize="@dimen/pading16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+ Add a new card"
+                            >
+                        </TextView>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/RR_credit_card"
+                        android:padding="@dimen/pading5"
+                        android:layout_marginBottom="@dimen/pading5"
+                        android:layout_marginLeft="@dimen/pading5"
+                        android:layout_marginRight="@dimen/pading5"
+                        android:layout_marginTop="@dimen/pading10"
+                        android:background="@drawable/border_bg_new"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        >
+                        <ImageView
+                            android:id="@+id/img_visa"
+                            android:layout_marginLeft="@dimen/pading10"
+                            android:src="@mipmap/visa"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            >
+                        </ImageView>
+
+                        <LinearLayout
+                            android:layout_marginLeft="@dimen/pading10"
+                            android:layout_toRightOf="@+id/img_visa"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/pading20"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Credit/Debit Card"
+                                android:textStyle="bold"
+                                >
+                            </TextView>
+
+                            <TextView
+                                android:textSize="@dimen/pading14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ending in 80"
+                                >
+                            </TextView>
+
+                        </LinearLayout>
+
+                        <RadioButton
+                            android:checked="true"
+                            android:id="@+id/radio_credit"
+                            android:layout_margin="@dimen/pading10"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/RadioButton1"
+                            >
+
+                        </RadioButton>
+
+                    </RelativeLayout>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_toLeftOf="@+id/LL_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:padding="@dimen/pading5"
+                        android:visibility="gone"
+                        android:id="@+id/card_bank"
+                        app:cardCornerRadius="@dimen/pading12"
+                        android:layout_marginBottom="@dimen/pading5"
+                        android:layout_marginLeft="@dimen/pading5"
+                        android:layout_marginRight="@dimen/pading5"
+                        android:layout_marginTop="@dimen/pading10"
+                        tools:ignore="MissingDefaultResource">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/img_bank"
+                                android:layout_marginLeft="@dimen/pading10"
+                                android:src="@mipmap/bank"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                >
+                            </ImageView>
+
+                            <LinearLayout
+                                android:layout_marginLeft="@dimen/pading10"
+                                android:layout_toRightOf="@+id/img_bank"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/pading20"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bank Account"
+                                    android:textStyle="bold"
+                                    >
+                                </TextView>
+
+                                <TextView
+                                    android:textSize="@dimen/pading14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ending in 80"
+                                    >
+                                </TextView>
+
+                            </LinearLayout>
+
+                            <RadioButton
+                                android:id="@+id/radio_bank"
+                                android:layout_margin="@dimen/pading10"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/RadioButton1"
+                                >
+
+                            </RadioButton>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_toLeftOf="@+id/LL_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:visibility="gone"
+                        android:padding="@dimen/pading5"
+                        android:id="@+id/card_paypal"
+                        app:cardCornerRadius="@dimen/pading12"
+                        android:layout_marginBottom="@dimen/pading5"
+                        android:layout_marginLeft="@dimen/pading5"
+                        android:layout_marginRight="@dimen/pading5"
+                        android:layout_marginTop="@dimen/pading10"
+                        tools:ignore="MissingDefaultResource">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/img_paypal"
+                                android:layout_marginLeft="@dimen/pading10"
+                                android:src="@mipmap/paypal"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                >
+                            </ImageView>
+
+                            <LinearLayout
+                                android:layout_marginLeft="@dimen/pading10"
+                                android:layout_toRightOf="@+id/img_paypal"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/pading20"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Paypal"
+                                    android:textStyle="bold"
+                                    >
+                                </TextView>
+
+                                <TextView
+                                    android:textSize="@dimen/pading14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="my.paypal@gmail.com"
+                                    >
+                                </TextView>
+
+                            </LinearLayout>
+
+                            <RadioButton
+                                android:id="@+id/radio_paypall"
+                                android:layout_margin="@dimen/pading10"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/RadioButton1"
+                                >
+
+                            </RadioButton>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_toLeftOf="@+id/LL_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:padding="@dimen/pading5"
+                        app:cardCornerRadius="@dimen/pading12"
+                        android:id="@+id/cadrd_cash"
+                        android:layout_marginBottom="@dimen/pading5"
+                        android:layout_marginLeft="@dimen/pading5"
+                        android:layout_marginRight="@dimen/pading5"
+                        android:layout_marginTop="@dimen/pading10"
+                        tools:ignore="MissingDefaultResource">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/img_money"
+                                android:layout_marginLeft="@dimen/pading10"
+                                android:src="@mipmap/money"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                >
+                            </ImageView>
+
+                            <LinearLayout
+                                android:layout_marginLeft="@dimen/pading20"
+                                android:layout_toRightOf="@+id/img_money"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/pading20"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cash"
+                                    android:textStyle="bold"
+                                    >
+                                </TextView>
+
+                                <TextView
+                                    android:textSize="@dimen/pading14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Offer Payment Mode"
+                                    >
+                                </TextView>
+
+                            </LinearLayout>
+
+                            <RadioButton
+                                android:id="@+id/card_cash"
+                                android:layout_margin="@dimen/pading10"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/RadioButton1"
+                                >
+
+                            </RadioButton>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bttn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/pading20"
+        android:layout_marginTop="@dimen/pading5"
+        android:layout_marginBottom="@dimen/pading10"
+        android:layout_marginRight="@dimen/pading20"
+        android:text="Book Now"
+        android:backgroundTint="#D1322E"
+        android:background="@drawable/roundbttn_register"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pading18" />
+
+</RelativeLayout>

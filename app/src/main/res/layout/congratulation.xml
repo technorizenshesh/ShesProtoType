@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/pading10"
+    android:background="@drawable/dialog_bg">
+
+    <ImageView
+        android:id="@+id/img_right"
+        android:layout_margin="@dimen/pading10"
+        android:layout_centerHorizontal="true"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/right_check"
+        >
+
+    </ImageView>
+
+    <TextView
+        android:layout_below="@+id/img_right"
+        android:id="@+id/txt_cong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Your appoinment booking  is successfully"
+        android:textSize="@dimen/pading20"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:layout_marginTop="@dimen/pading10"
+        android:layout_marginRight="@dimen/pading20"
+        android:layout_marginLeft="@dimen/pading20"
+        android:id="@+id/txt_two"
+        android:layout_below="@+id/txt_cong"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="You can view the appoinment booking info in the Appointment Section  "
+        android:textSize="@dimen/pading14"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:layout_marginTop="@dimen/pading20"
+        android:layout_marginRight="@dimen/pading20"
+        android:layout_marginLeft="@dimen/pading20"
+        android:layout_below="@+id/txt_two"
+        android:id="@+id/bttn_cong"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="Continue Booking"
+        android:backgroundTint="#1964F8"
+        android:background="@drawable/roundbttn_register"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pading18" />
+
+    <TextView
+        android:layout_marginTop="@dimen/pading10"
+        android:layout_below="@+id/bttn_cong"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Go to appoinment"
+        android:textSize="@dimen/pading16"
+       android:textStyle="bold"
+        />
+</RelativeLayout>

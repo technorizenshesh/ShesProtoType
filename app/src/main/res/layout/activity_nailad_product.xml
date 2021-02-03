@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    >
+
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:elevation="6dp"
+        android:padding="5dp"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/colorPrimary"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/RR_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/RR_nav"
+            android:layout_width="@dimen/padding50"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@mipmap/filter"
+                android:layout_width="@dimen/pading20"
+                android:layout_height="@dimen/pading20"
+                >
+            </ImageView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_toRightOf="@+id/RR_nav"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nailed"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pading24">
+        </TextView>
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/pading10"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/RR_filter"
+                android:layout_width="@dimen/padding50"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/fillter_icon"
+                    android:layout_width="@dimen/pading20"
+                    android:layout_height="@dimen/pading20"
+                    >
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="35dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/search_white"
+                    android:layout_width="@dimen/pading20"
+                    android:layout_height="@dimen/pading20"
+                    >
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RR_back"
+                android:layout_width="35dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:tint="@color/white"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/bell"
+                    android:layout_width="@dimen/pading20"
+                    android:layout_height="@dimen/pading20"
+                    >
+                </ImageView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="@dimen/pading10"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/view"
+        android:layout_below="@+id/RR_toolbar"
+        android:background="#1F1F1F"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        ></View>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_ProductList"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:visibility="visible"
+        />
+
+
+    <TextView
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/txt_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Data Found"
+        android:textColor="@color/white"
+        android:textSize="@dimen/padding16" />
+
+
+</RelativeLayout>

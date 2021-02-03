@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C0B0B"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+
+
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:elevation="6dp"
+        android:padding="5dp"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/colorPrimary"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_above="@+id/btn_book_now"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:background="#38171717"
+                    android:id="@+id/RR_img_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <ImageView
+                        android:id="@+id/haircut_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fitsSystemWindows="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/hair_wash" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:padding="@dimen/pading5"
+                    android:background="@color/black"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_specilist"
+                        android:layout_margin="5dp"
+                        android:singleLine="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/pading20" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:padding="@dimen/pading5"
+                    android:background="@color/black"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkedButton="@+id/rbNo"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:theme="@style/RadioButton"
+                            android:id="@+id/RR_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Male"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/pading16"
+                            android:textColor="@color/white"
+                            ></RadioButton>
+                        <RadioButton
+                            android:theme="@style/RadioButton"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/pading10"
+                            android:layout_toRightOf="@+id/RR_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Female"
+                            android:textSize="@dimen/pading16"
+                            android:textColor="@color/white"
+                            ></RadioButton>
+
+                    </RadioGroup>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:padding="@dimen/pading5"
+                    android:background="@color/black"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_margin="5dp"
+                        android:singleLine="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Choose your services"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/pading20" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:singleLine="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total: $15.00"
+                        android:textStyle="bold"
+                        android:textColor="@color/Mehroon"
+                        android:textSize="@dimen/pading14" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_margin="@dimen/padding5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_service"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:scrollbars="vertical"
+                        android:visibility="visible"
+                        />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_marginBottom="@dimen/pading10"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/pading10"
+        android:layout_marginLeft="@dimen/pading10"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_book_now"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/RR_login"
+        android:layout_gravity="center"
+        android:text="Book Now"
+        android:textStyle="bold"
+        android:background="@drawable/roundbttn_register"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pading18" />
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_marginRight="@dimen/pading5"
+            android:layout_marginLeft="5dp"
+            android:padding="@dimen/pading5"
+            android:background="@color/black"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/txt_hair_cut"
+                android:layout_margin="5dp"
+                android:singleLine="true"
+                android:gravity="left"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Hair cut"
+                android:textStyle="bold"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/pading18" />
+
+            <EditText
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/pading20"
+                android:layout_toRightOf="@+id/txt_hair_cut"
+                android:id="@+id/edt_hair_cut"
+                android:paddingRight="15dp"
+                android:textColor="@color/whiteSecond"
+                android:textSize="@dimen/pading16"
+                android:layout_marginTop="20dp"
+                android:hint="Relaxed Bod  ($15)"
+                android:background="@drawable/whiteeditround"
+                android:paddingLeft="10dp"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:drawableRight="@drawable/drop_dwon_new"
+                android:layout_height="50dp"
+                android:drawablePadding="10dp"
+                android:textColorHint="@color/whiteSecond"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginRight="@dimen/pading5"
+            android:layout_marginLeft="5dp"
+            android:padding="@dimen/pading5"
+            android:background="@color/black"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/txt_hair_cut"
+                android:layout_margin="5dp"
+                android:singleLine="true"
+                android:gravity="left"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Spa"
+                android:textStyle="bold"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/pading18" />
+
+            <EditText
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/pading20"
+                android:layout_toRightOf="@+id/txt_hair_cut"
+                android:id="@+id/edt_spa"
+                android:paddingRight="15dp"
+                android:textColor="@color/whiteSecond"
+                android:textSize="@dimen/pading16"
+                android:layout_marginTop="20dp"
+                android:hint="Relaxed Bod  ($15)"
+                android:background="@drawable/whiteeditround"
+                android:paddingLeft="10dp"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:drawableRight="@drawable/drop_dwon_new"
+                android:layout_height="50dp"
+                android:drawablePadding="10dp"
+                android:textColorHint="@color/whiteSecond"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginRight="@dimen/pading5"
+            android:layout_marginLeft="5dp"
+            android:padding="@dimen/pading5"
+            android:background="@color/black"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/txt_hair_cut"
+                android:layout_margin="5dp"
+                android:singleLine="true"
+                android:gravity="left"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Make Up"
+                android:textStyle="bold"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/pading18" />
+
+            <EditText
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/pading20"
+                android:layout_toRightOf="@+id/txt_hair_cut"
+                android:id="@+id/edt_makup"
+                android:paddingRight="15dp"
+                android:textColor="@color/whiteSecond"
+                android:textSize="@dimen/pading16"
+                android:layout_marginTop="20dp"
+                android:hint="Relaxed Bod  ($15)"
+                android:background="@drawable/whiteeditround"
+                android:paddingLeft="10dp"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:drawableRight="@drawable/drop_dwon_new"
+                android:layout_height="50dp"
+                android:drawablePadding="10dp"
+                android:textColorHint="@color/whiteSecond"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginRight="@dimen/pading5"
+            android:layout_marginLeft="5dp"
+            android:padding="@dimen/pading5"
+            android:background="@color/black"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/txt_hair_cut"
+                android:layout_margin="5dp"
+                android:singleLine="true"
+                android:gravity="left"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Facial"
+                android:textStyle="bold"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/pading18" />
+
+            <EditText
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/pading20"
+                android:layout_toRightOf="@+id/txt_hair_cut"
+                android:id="@+id/edt_facial"
+                android:paddingRight="15dp"
+                android:textColor="@color/whiteSecond"
+                android:textSize="@dimen/pading16"
+                android:layout_marginTop="20dp"
+                android:hint="Relaxed Bod  ($15)"
+                android:background="@drawable/whiteeditround"
+                android:paddingLeft="10dp"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:drawableRight="@drawable/drop_dwon_new"
+                android:layout_height="50dp"
+                android:drawablePadding="10dp"
+                android:textColorHint="@color/whiteSecond"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginRight="@dimen/pading5"
+            android:layout_marginLeft="5dp"
+            android:padding="@dimen/pading5"
+            android:background="@color/black"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/txt_hair_cut"
+                android:layout_margin="5dp"
+                android:singleLine="true"
+                android:gravity="left"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Hair Color"
+                android:textStyle="bold"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/pading18" />
+
+            <EditText
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/pading20"
+                android:layout_toRightOf="@+id/txt_hair_cut"
+                android:id="@+id/edt_color"
+                android:paddingRight="15dp"
+                android:textColor="@color/whiteSecond"
+                android:textSize="@dimen/pading16"
+                android:layout_marginTop="20dp"
+                android:hint="Relaxed Bod  ($15)"
+                android:background="@drawable/whiteeditround"
+                android:paddingLeft="10dp"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:drawableRight="@drawable/drop_dwon_new"
+                android:layout_height="50dp"
+                android:drawablePadding="10dp"
+                android:textColorHint="@color/whiteSecond"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginRight="@dimen/pading5"
+            android:layout_marginLeft="5dp"
+            android:padding="@dimen/pading5"
+            android:background="@color/black"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/txt_hair_cut"
+                android:layout_margin="5dp"
+                android:singleLine="true"
+                android:gravity="left"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Bridal"
+                android:textStyle="bold"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/pading18" />
+
+            <EditText
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/pading20"
+                android:layout_toRightOf="@+id/txt_hair_cut"
+                android:id="@+id/edt_bridal"
+                android:paddingRight="15dp"
+                android:textColor="@color/whiteSecond"
+                android:textSize="@dimen/pading16"
+                android:layout_marginTop="20dp"
+                android:hint="Relaxed Bod  ($15)"
+                android:background="@drawable/whiteeditround"
+                android:paddingLeft="10dp"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:drawableRight="@drawable/drop_dwon_new"
+                android:layout_height="50dp"
+                android:drawablePadding="10dp"
+                android:textColorHint="@color/whiteSecond"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

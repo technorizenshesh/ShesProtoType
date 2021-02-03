@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    >
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/progressBar"
+        android:background="@drawable/progresh_background"
+        android:elevation="@dimen/padding6"
+        android:padding="@dimen/padding5"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/green_new"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/rr_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="25dp"
+        >
+
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:text="Card Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edt_cardName"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:paddingLeft="10dp"
+                android:maxLength="16"
+                android:drawablePadding="15dp"
+                android:background="@drawable/edit_textborder"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:text="Card Number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edt_cardNumber"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:paddingLeft="10dp"
+                android:maxLength="16"
+                android:drawablePadding="15dp"
+                android:background="@drawable/edit_textborder"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:text="Exp. Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edit_textborder"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    >
+
+                    <EditText
+                        android:id="@+id/edt_exprDate_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/txt_slace"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:singleLine="true"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/txt_slace"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="35dp"
+                        android:gravity="center"
+                        android:text="/"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_toRightOf="@+id/txt_slace"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:id="@+id/edt_exprDateTwo_year"
+                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:maxLength="2"
+                        />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:text="CVC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/edt_CVV"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_textborder"
+                    android:drawablePadding="15dp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:weightSum="2"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:text="First Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/fullname_etxt1"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:maxLength="5"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"
+                    android:drawablePadding="15dp"
+                    android:background="@drawable/edit_textborder"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:text="Last Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"
+                    android:maxLength="3"
+                    android:drawablePadding="15dp"
+                    android:background="@drawable/edit_textborder"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:weightSum="2"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:text="ZipCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"
+                    android:maxLength="8"
+                    android:drawablePadding="15dp"
+                    android:background="@drawable/edit_textborder"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="invisible"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:text="Last Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:textColor="#00bfff"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"
+                    android:maxLength="3"
+                    android:drawablePadding="15dp"
+                    android:background="@drawable/edit_textborder"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.stripe.android.view.CardInputWidget
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:id="@+id/card_input_widget"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_textborder"
+            android:padding="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="50dp"
+            />
+
+        <EditText
+            android:visibility="gone"
+            android:textColor="#00bfff"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/card_input_widget"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:hint="@string/enter_name"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:paddingLeft="10dp"
+            android:maxLength="30"
+            android:drawablePadding="15dp"
+            android:drawableLeft="@drawable/customer_icon"
+            android:background="@drawable/edit_textborder"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/email_etxt"
+            android:layout_width="match_parent"
+            android:inputType="textEmailAddress"
+            android:layout_below="@+id/fullname_etxt1"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="@string/enter_email"
+            android:textColor="#00bfff"
+            android:singleLine="true"
+            android:drawableLeft="@drawable/e_mail"
+            android:paddingLeft="10dp"
+            android:drawablePadding="15dp"
+            android:background="@drawable/edit_textborder"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/pay_btn"
+        android:layout_height="match_parent"
+      >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:visibility="visible"
+                android:id="@+id/rr_pay_method"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <RelativeLayout
+                    android:id="@+id/RR_back"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/back_icon" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:textSize="@dimen/padding18"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="Payment"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RR_information"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/rr_pay_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="Card"
+                    android:id="@+id/txt_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/txt_card"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="Information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_margin="@dimen/padding20"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:text="Card Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.braintreepayments.cardform.view.CardholderNameEditText
+                android:id="@+id/et_card_holder_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding50"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/padding15"
+                android:textColorHint="@color/whiteSecond"
+                android:layout_marginRight="@dimen/padding15"
+                android:background="@drawable/whiteeditround"
+                android:hint="Card Holder Name"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_margin="@dimen/padding20"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:text="Card Number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <EditText
+                android:padding="@dimen/padding10"
+                android:text="4242424242424242"
+                android:id="@+id/et_card_number1"
+                android:textColor="@color/white"
+                android:maxLength="16"
+                android:textColorHint="@color/whiteSecond"
+                android:inputType="number"
+                android:layout_marginLeft="@dimen/padding15"
+                android:layout_marginRight="@dimen/padding15"
+                android:background="@drawable/whiteeditround"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding50"
+                >
+            </EditText>
+
+
+
+            <TextView
+                android:layout_margin="@dimen/padding20"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:text="Expiry Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.braintreepayments.cardform.view.ExpirationDateEditText
+                android:id="@+id/et_card_expiry_date"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/padding50"
+                android:layout_marginLeft="@dimen/padding15"
+                android:layout_marginRight="@dimen/padding15"
+                android:textColorHint="@color/whiteSecond"
+                android:textColor="@color/white"
+                android:background="@drawable/whiteeditround"
+                android:hint="Card Expiry"
+                android:textSize="@dimen/padding13"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_margin="@dimen/padding20"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:text="Cvv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_marginBottom="@dimen/padding50"
+                android:padding="@dimen/padding10"
+                android:text="123"
+                android:maxLength="3"
+                android:inputType="number"
+                android:id="@+id/edt_CVV_number"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/padding15"
+                android:textColorHint="@color/whiteSecond"
+                android:layout_marginRight="@dimen/padding15"
+                android:background="@drawable/whiteeditround"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding50"
+                >
+            </EditText>
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <Button
+        android:id="@+id/pay_btn"
+        android:visibility="visible"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:textSize="18dp"
+        android:background="@drawable/roundbttn_register"
+        android:ems="15"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+        android:text="Checkout"
+        android:textColor="@color/white"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context=".CreateProfile.CreateProfileActivity">
+
+
+    <!--Toolbaar-->
+    <RelativeLayout
+        android:id="@+id/RR_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/RR_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@mipmap/back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                >
+            </ImageView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/RR_back"
+            android:id="@+id/txt_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Area"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pading24">
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/RR_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_below="@+id/RR_profile"
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/pading20"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/whiteeditround"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    >
+
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:drawablePadding="@dimen/pading14"
+                        android:drawableLeft="@drawable/search"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Area"
+                        android:textStyle="bold"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/pading16">
+                    </TextView>
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/bttn_Sedn"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_below="@+id/RR_login"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/pading18"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="@dimen/pading18"
+                    android:layout_marginBottom="25dp"
+                    android:text="Use my current location"
+                    android:background="@drawable/roundbttn_register"
+                    android:textAllCaps="false"
+                    android:paddingLeft="@dimen/pading20"
+                    android:drawableLeft="@mipmap/location"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading18" />
+
+                <EditText
+                    android:drawablePadding="@dimen/pading10"
+                    android:drawableLeft="@mipmap/place"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:hint="Adailiya"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+                <EditText
+                    android:drawablePadding="@dimen/pading10"
+                    android:drawableLeft="@mipmap/place"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:hint="Adailiya"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+                <EditText
+                    android:drawablePadding="@dimen/pading10"
+                    android:drawableLeft="@mipmap/place"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:hint="Abu Fatira"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+                <EditText
+                    android:drawablePadding="@dimen/pading10"
+                    android:drawableLeft="@mipmap/place"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:hint="Adailiya"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+                <EditText
+                    android:drawablePadding="@dimen/pading10"
+                    android:drawableLeft="@mipmap/place"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:hint="Adan"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+                <EditText
+                    android:drawablePadding="@dimen/pading10"
+                    android:drawableLeft="@mipmap/place"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:hint="Ahmadi"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

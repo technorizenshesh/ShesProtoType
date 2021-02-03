@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:paddingLeft="@dimen/pading5"
+    android:layout_height="match_parent"
+    >
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/progressBar"
+        android:background="@drawable/progresh_background"
+        android:elevation="@dimen/padding6"
+        android:padding="@dimen/padding5"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/green_new"
+        android:visibility="gone"/>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/pading5"
+            android:layout_toLeftOf="@+id/LL_img"
+            android:layout_width="60dp"
+            android:id="@+id/card_hair1"
+            android:layout_height="60dp"
+            app:cardCornerRadius="@dimen/pading12"
+            app:cardBackgroundColor="#D1322E"
+            android:layout_margin="@dimen/pading10"
+            tools:ignore="MissingDefaultResource">
+
+            <ImageView
+                android:src="@mipmap/hair"
+                android:layout_width="50dp"
+                android:layout_gravity="center"
+                android:layout_height="50dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="fitXY" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:id="@+id/LL_txt1"
+            android:layout_marginLeft="@dimen/pading5"
+            android:layout_toRightOf="@+id/card_hair1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/pading12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HairStyle"
+                >
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:textSize="@dimen/pading12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 Types"
+                >
+            </TextView>
+
+
+        </LinearLayout>
+
+        <CheckBox
+            android:buttonTint="#272727"
+            android:layout_centerVertical="true"
+            android:id="@+id/checl_item1"
+            android:layout_margin="@dimen/pading5"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </CheckBox>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/pading10"
+            android:layout_toLeftOf="@+id/checl_item1"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/pading14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Relaxed Bob ($15)"
+            >
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/RR_hairstyle"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/pading5"
+            android:layout_toLeftOf="@+id/LL_img"
+            android:layout_width="60dp"
+            android:id="@+id/card_hair"
+            android:layout_height="60dp"
+            app:cardCornerRadius="@dimen/pading12"
+            app:cardBackgroundColor="#D1322E"
+            android:layout_margin="@dimen/pading10"
+            tools:ignore="MissingDefaultResource">
+
+            <ImageView
+                android:src="@mipmap/razor"
+                android:layout_width="50dp"
+                android:layout_gravity="center"
+                android:layout_height="50dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="fitXY" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:id="@+id/LL_txt"
+            android:layout_marginLeft="@dimen/pading5"
+            android:layout_toRightOf="@+id/card_hair"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/pading12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HairStyle"
+                >
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:textSize="@dimen/pading12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 Types"
+                >
+            </TextView>
+
+
+        </LinearLayout>
+
+        <CheckBox
+            android:buttonTint="#272727"
+            android:layout_centerVertical="true"
+            android:id="@+id/checl_item"
+            android:layout_margin="@dimen/pading5"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </CheckBox>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/pading10"
+            android:layout_toLeftOf="@+id/checl_item"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/pading14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Relaxed Bob ($15)"
+            >
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_margin="@dimen/padding5"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_service"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:visibility="visible"
+            />
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/btn_book_now1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/RR_hairstyle"
+        android:layout_gravity="center"
+        android:text="BOOK NOW"
+        android:textStyle="bold"
+        android:background="@drawable/roundbttn_register"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pading18" />
+
+
+</LinearLayout>
